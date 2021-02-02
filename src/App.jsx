@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
 import {
   BrowserRouter as Router,
   Route,
   Switch,
 } from 'react-router-dom';
 import Home from './containers/home/Home';
-import Details from './containers/details/Details';
+import Details from './containers/detail/Details';
+import List from './containers/list/List';
 
 
 export default class App extends React.Component { 
@@ -28,13 +28,23 @@ export default class App extends React.Component {
               />
 
               <Route
-                path="/details"
+                path="/details/:id"
                 exact
                 // Can pass props this way
                 // render={(routerProps) => <Home {...routerProps} />}
                 // ------------------------------------------------------------
                 // can't pass prop easier syntax 
                 component = { Details }
+              />
+
+              <Route
+                path="/list"
+                exact
+                // Can pass props this way
+                // render={(routerProps) => <Home {...routerProps} />}
+                // ------------------------------------------------------------
+                // can't pass prop easier syntax 
+                component = { List }
               />
 
             </Switch>

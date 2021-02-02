@@ -4,32 +4,15 @@ import React from 'react';
 
 export default class App extends React.Component {
 
-      componentDidMount = async() => {
-        this.fetchRickAndMorty();
-      }
-      
-      // ===============================================================================================
+  render() {
 
-      render() {
-     
-        return (
-          <div className="articleOne">
-            {/* ============================================================= */}
-            <section className="Main">
-         
+    return (
+      <div className="articleOne">
+        <section className="Main">
+          <div> Hi, My name is Ricky. Do you want to meet my Morty? </div>
 
-            </section>
-            {/* ================================================================ */}
-
-            {/* Here is where I take the state of my pokemon Data and connect it to the pokemon mapper that will display all of my pokemon */}
-            <div className="poker">
-        
-            </div>
-
-            {/* ============================================================= */}
-
-
-          </div>
-        );
-      }
+        </section>
+      </div>
+    );
+  }
 }
